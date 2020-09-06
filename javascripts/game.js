@@ -448,9 +448,9 @@ function getGalaxyCostScalingStart() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 60);
-    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
-    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
+    let amount = 80 + ((player.galaxies) * 6);
+    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 4)
+    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 60)
 
     let galaxyCostScalingStart = getGalaxyCostScalingStart()
     if (player.currentEternityChall == "eterc5") {
@@ -459,7 +459,7 @@ function getGalaxyRequirement() {
     else if ((player.galaxies) >= galaxyCostScalingStart) {
         amount += Math.pow((player.galaxies)-(galaxyCostScalingStart-1),2)+(player.galaxies)-(galaxyCostScalingStart-1)
     }
-    if (player.galaxies >= 800) {
+    if (player.galaxies >= 1800) {
         amount = Math.floor(amount * Math.pow(1.002, (player.galaxies-799)))
     }
 
@@ -1031,7 +1031,7 @@ function buyEternityUpgrade(name, cost) {
 
 function buyEPMult() {
     if (player.eternityPoints.gte(player.epmultCost)) {
-        player.epmult = player.epmult.times(5)
+        player.epmult = player.epmult.times(24)
         player.eternityBuyer.limit = player.eternityBuyer.limit.times(5)
         document.getElementById("priority13").value = formatValue("Scientific", player.eternityBuyer.limit, 2, 0);
         player.eternityPoints = player.eternityPoints.minus(player.epmultCost)
