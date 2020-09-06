@@ -378,10 +378,10 @@ document.getElementById("theme").onclick = function () {
 }
 
 
-let kongIPMult = 1
-let kongDimMult = 1
-let kongAllDimMult = 1
-let kongEPMult = 1
+let kongIPMult = 69
+let kongDimMult = 69
+let kongAllDimMult = 69
+let kongEPMult = 69
 
 
 
@@ -448,9 +448,9 @@ function getGalaxyCostScalingStart() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 6);
-    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 4)
-    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 60)
+    let amount = 5 + ((player.galaxies) * 6);
+    if (player.timestudy.studies.includes(42)) amount = 5 + ((player.galaxies) * 4)
+    if (player.currentChallenge == "challenge4") amount = 11 + ((player.galaxies) * 60)
 
     let galaxyCostScalingStart = getGalaxyCostScalingStart()
     if (player.currentEternityChall == "eterc5") {
